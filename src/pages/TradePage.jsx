@@ -55,7 +55,7 @@ const TradePage = () => {
 
   useEffect(() => {
     if (userId) {
-      ws.current = new WebSocket(`ws://localhost:8000/api/markets/ws/fe/${userId}?token=${token}`);
+      ws.current = new WebSocket(`wss://giaongay.cloud/api/markets/ws/fe/${userId}?token=${token}`);
 
       ws.current.onopen = () => {
         console.log('WebSocket connected');
